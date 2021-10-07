@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- font awesome cdn link  -->
+       <link rel="stylesheet" href="./style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="box-container">
+    
+    <div class="box">
+        <div class="image-container">
+
+            <div class="big-image">
+                <img src="/w1.jpeg" alt="PRODUCT">
+            </div>
+    
+            <div class="small-image">
+                <img class="active" src="/w3.jpeg" alt="">
+                <img src="/w2.jpeg" alt="">
+                <img src="/w3.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="content">
+            <h3 class="title">watch for men</h3>
+            <div class="price">10000/-</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae architecto praesentium modi nulla mollitia sequi enim eius vero? Veritatis animi reprehenderit quod, aliquid recusandae impedit aspernatur velit quasi ea dolores.</p>
+
+            <form action="">
+
+                <div class="dropDown">
+                    <span>size :</span>
+                    <select name="" id="">
+                        <option value="small">S</option>
+                         <option value="medium">M</option>
+                         <option value="large">L</option>
+                         <option value="extra large">extra large</option>
+                    </select>
+                </div>
+                <div class="quantity">
+                    <span>quantity :</span>
+                    <input type="number" value="1">
+                </div>
+            </form>
+
+            <a href="#"><button class="btn"><i class="fa fa-shopping-cart"></i>add to cart</button></a>
+            <span class="stock"><i class="fa fa-check"></i> in stock</span>
+
+            <div class="share">
+                <a href="#">facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">instagram</a>
+                <a href="#">pinterest</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!--jquery cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+
+    $(document).ready(function(){
+    
+        $('.small-image img').click(function(){
+    
+            $(this).addClass('active').siblings().removeClass('active');
+    
+            let image = $(this).attr('src');
+            $('.big-image img').attr('src',image);
+    
+        });
+    
+    });
+    
+    </script>
+</body>
+</html>
